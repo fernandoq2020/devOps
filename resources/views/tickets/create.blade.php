@@ -11,7 +11,7 @@
             @endif
             <div class="card">
                 <div class="card-header">Add ticket </div>
-
+                <div class="hidden">new line</div>  
                 <div class="card-body">
                     <form method="POST" action="{{ route('tickets.store') }}" enctype="multipart/form-data">
                         @csrf
