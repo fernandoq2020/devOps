@@ -11,7 +11,7 @@ class AddRelationshipFieldsToTicketsTable extends Migration
         Schema::table('tickets', function (Blueprint $table) {
             $table->unsignedInteger('status_id');
 
-            $table->foreign('status_id', 'status_fk_583763')->references('id')->on('statuses');
+            //$table->foreign('status_id', 'status_fk_583763')->references('id')->on('statuses');
 
             $table->unsignedInteger('priority_id');
 
