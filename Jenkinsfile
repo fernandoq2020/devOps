@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('build') {
            steps {
-                sh 'composer install'
+                bat 'composer install'
             }
         }
     }
