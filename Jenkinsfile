@@ -8,8 +8,8 @@ pipeline {
         }
         stage('build') {
              steps {
-                bat 'mkdir build/api'
-                bat 'mkdir build/logs'
+                bat 'mkdir build\api'
+                bat 'mkdir build\logs'
              }
         }
         stage('PHP Syntax check') { 
