@@ -6,18 +6,17 @@ pipeline {
                 bat 'composer install'
             }
         }
-        
-         stage('build') {
+        stage('build') {
              steps {
-                sh 'rm -rf build/api'
-                sh 'rm -rf build/logs'
-                sh 'mkdir build/api'
-                sh 'mkdir build/logs'
+                bat 'rm -rf build/api'
+                bat 'rm -rf build/logs'
+                bat 'mkdir build/api'
+                bat 'mkdir build/logs'
              }
-         }
+        }
         stage('PHP Syntax check') { 
             steps { 
-                sh 'vendor/bin/parallel-lint --exclude vendor/ .' 
+                bat 'vendor/bin/parallel-lint --exclude vendor/ .' 
             } 
         }
     }
