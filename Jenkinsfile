@@ -8,8 +8,8 @@ pipeline {
         }
         stage('build') {
              steps {
-                bat 'rm -rf build/api'
-                bat 'rm -rf build/logs'
+                bat 'rmdir build/api'
+                bat 'rmdir build/logs'
                 bat 'mkdir build/api'
                 bat 'mkdir build/logs'
              }
