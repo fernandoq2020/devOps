@@ -17,7 +17,7 @@ pipeline {
         }
         stage('PHP STest') { 
             steps { 
-                bat 'vendor/bin/parallel-lint --exclude vendor/ .' 
+                bat 'vendor\bin\phpunit' 
             } 
         }
     }
