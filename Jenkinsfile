@@ -18,7 +18,7 @@ pipeline {
         }
         stage('PHP STest') { 
             steps { 
-                bat 'vendor\bin\phpunit --filter only_logged_in_users_can_see_ticket_list -c phpunit.xml' 
+                bat 'php "vendor/phpunit/phpunit/phpunit" --filter only_logged_in_users_can_see_ticket_list -c phpunit.xml' 
             } 
         }
     }
