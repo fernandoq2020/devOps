@@ -11,9 +11,8 @@ pipeline {
         }
         stage('build') {
              steps {
-                bat 'rmdir "build/api"'
-                bat 'mkdir "build/api"'
-                bat 'mkdir "build/logs"'
+                bat 'if not exist "build/api" mkdir "build/api"'
+                bat 'if not exist "build/logs" mkdir "build/logs"'
              }
         }
         stage('PHP STest') { 
