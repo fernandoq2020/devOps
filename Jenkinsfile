@@ -4,6 +4,9 @@ pipeline {
         stage('compile') {
            steps {
                 bat 'composer install'
+                bat "xcopy .env.example .env"
+                bat "php artisan config:clear"
+                bat "php artisan config:cache"
             }
         }
         stage('build') {
@@ -13,7 +16,7 @@ pipeline {
                 bat 'mkdir "build/logs"'
              }
         }
-        stage('PHP Syntax check') { 
+        stage('PHP STest') { 
             steps { 
                 bat 'vendor/bin/parallel-lint --exclude vendor/ .' 
             } 
