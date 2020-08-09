@@ -4,7 +4,7 @@ pipeline {
         stage('compile') {
            steps {
                 bat 'composer install'
-                bat "xcopy .env.example .env"
+                bat "copy .env.example .env /Y"
                 bat "php artisan config:clear"
                 bat "php artisan config:cache"
             }
