@@ -35,7 +35,7 @@ class TicketTest extends TestCase
 
 
     /** @test */
-    public function not_loged_users_can_see_tickets(){
+    /*public function not_loged_users_can_see_tickets(){
         
         //$this->withoutExceptionHandling();
         //create an user
@@ -44,10 +44,10 @@ class TicketTest extends TestCase
 
         $respose = $this->get('/admin/tickets')->assertOk();
 
-    }
+    }*/
     
     /** @test */
-    public function user_creation_without_loggingin(){
+    /*public function user_creation_without_loggingin(){
         
         //$this->withoutExceptionHandling();
         $respose = $this->any('admin/users/create', [
@@ -58,6 +58,6 @@ class TicketTest extends TestCase
 
         $this->assertCount(1,User::all());
 
-    }
+    }*/
 
 }
