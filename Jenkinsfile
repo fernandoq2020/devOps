@@ -19,7 +19,8 @@ pipeline {
                 bat "php artisan key:generate"
                 bat "php artisan config:clear"
                 bat "php artisan config:cache"
-                bat "php vendor/phpunit/phpunit/phpunit" --filter only_logged_in_users_can_see_ticket_list -c phpunit.xml"            } 
+                bat "php vendor/phpunit/phpunit/phpunit" --filter only_logged_in_users_can_see_ticket_list -c phpunit.xml'
+            } 
         }
     }
 }
