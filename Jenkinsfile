@@ -24,7 +24,7 @@ pipeline {
         }
         stage('Generate Deployable') { 
             steps {
-                bat 'if not exist project.zip powershell "Compress-Archive ../DevPep ticketsFolder.zip"'
+                bat 'if not exist ticketsFolder.zip powershell "Compress-Archive ../DevPep ticketsFolder.zip"'
             }
         }
     }
