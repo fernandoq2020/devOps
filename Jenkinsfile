@@ -22,5 +22,8 @@ pipeline {
                 bat 'php "vendor/phpunit/phpunit/phpunit" -c phpunit.xml'
             } 
         }
+        stage('Generate Deployable') { 
+            steps {
+                bat 'if not exist project.zip powershell "Compress-Archive ../DevPep ticketsFolder.zip"'
     }
 }
