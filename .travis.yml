@@ -30,7 +30,6 @@ install:
 
   # install drush globally
   - composer global require drush/drush:6.*
-
 before_script:
   # navigate out of module directory to prevent blown stack by recursive module lookup
   - cd ../..
